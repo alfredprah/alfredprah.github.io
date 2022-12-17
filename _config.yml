@@ -16,7 +16,7 @@ linkedin_username:  alfredprah
 #google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
-theme: jekyll-theme-clean-blog
+# theme: jekyll-theme-clean-blog
 markdown:           kramdown
 paginate:           5
 paginate_path:      "/posts/page:num/"
