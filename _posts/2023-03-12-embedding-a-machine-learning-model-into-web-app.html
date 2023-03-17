@@ -59,8 +59,11 @@ pickle.dump(clf, <br>
 
 <ul>
   <li>The <b> sentimentfolder </b> directory is where we'll later store the files and data for our web app.</li>
-  <li>Within the sentimentfolder directory, we created a <b> pkl_objects</b> subdirectory to save the serialized Python objects to our local drive</li>
-  <li>Through Pickle's  <b>dump</b> method, we serialized our pre-trained model </li>
+  <li>Within the sentimentfolder directory, we created a <b> pkl_objects</b> subdirectory to save the serialized Python objects to our local drive.</li>
+  <li>Through Pickle's <b>dump</b> method, we serialized our pre-trained model, together with the stop word set from NLTK, so we don't have to install it
+    on the server. </li>
+  <li>The dump method took the object we want to pickle as its first parameter, then provided an open file obkect the Python object will be written to 
+    as a second parameter.</li>
 </ul>
 
 
