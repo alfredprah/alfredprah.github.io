@@ -62,8 +62,13 @@ pickle.dump(clf, <br>
   <li>Within the sentimentfolder directory, we created a <b> pkl_objects</b> subdirectory to save the serialized Python objects to our local drive.</li>
   <li>Through Pickle's <b>dump</b> method, we serialized our pre-trained model, together with the stop word set from NLTK, so we don't have to install it
     on the server. </li>
-  <li>The dump method took the object we want to pickle as its first parameter, then provided an open file obkect the Python object will be written to 
+  <li>The dump method took the object we want to pickle as its first parameter, then provided an <b>open</b> file object to specify where 
+    the Python object will be written to.
     as a second parameter.</li>
+  <li>Through the <b> 'wb' </b> parameter inside the open() function, the .pkl file will be opened in "binary mode".</li>
+  <li>We set <b> protocol </b> = 4 to play it safe with any potential mismatch that might occur between our Python version or env. & the most 
+    efficient protocol available for Pickle files (NB: for Python 3.4, this was the latest protocol. If any errors persist, 
+    consider a lower protocol). </li>
 </ul>
 
 
