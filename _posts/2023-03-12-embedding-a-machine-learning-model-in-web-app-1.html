@@ -46,7 +46,7 @@ import pickle <br>
 import os <br>
 dest = os.path.join('sentimentfolder', 'pkl_objects') <br>
 if not os.path.exisits(dest): <br>
-&emsp; os.lakedirs(dest) <br>
+&emsp; os.makedirs(dest) <br>
 pickle.dump(stop, <br>
   &emsp; open (os.path.join(dest, 'stopwords.pkl'), 'wb'), <br>
   &emsp; protocol=4) <br>
