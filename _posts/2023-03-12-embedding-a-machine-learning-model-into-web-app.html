@@ -40,15 +40,14 @@ that was marketed to massage gums like never experienced before, was received by
 import pickle <br>
 import os <br>
 dest = os.path.jpoin('sentimentfolder', 'pkl_objects') <br>
-if not os.path.exisits(dest) <br>
-  os.lakedirs(dest) <br>
+if not os.path.exisits(dest): <br>
+&emsp; os.lakedirs(dest) <br>
 pickle.dump(stop, <br>
-  open (os.path.join(dest, 'stopwords.pkl'), 'wb'), <br>
-  protocol=4) <br>
-  
-  pickle.dump(clf, <br>
-  open(os.path.join(dest, 'classifier.pkl'), 'wb'), <br>
-  protocol = 4) <br>
+  &emsp; open (os.path.join(dest, 'stopwords.pkl'), 'wb'), <br>
+  &emsp; protocol=4) <br>
+pickle.dump(clf, <br>
+  &emsp; open(os.path.join(dest, 'classifier.pkl'), 'wb'), <br>
+  &emsp; protocol = 4) <br>
  
 </code>
   </div>
