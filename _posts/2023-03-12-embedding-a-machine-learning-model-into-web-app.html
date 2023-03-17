@@ -37,7 +37,19 @@ that was marketed to massage gums like never experienced before, was received by
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">view code</button>
   <div id = "demo" class="collapse">
 <code> <br>
-
+import pickle <br>
+import os <br>
+dest = os.path.jpoin('sentimentfolder', 'pkl_objects') <br>
+if not os.path.exisits(dest) <br>
+  os.lakedirs(dest) <br>
+pickle.dump(stop, <br>
+  open (os.path.join(dest, 'stopwords.pkl'), 'wb'), <br>
+  protocol=4) <br>
+  
+  pickle.dump(clf, <br>
+  open(os.path.join(dest, 'classifier.pkl'), 'wb'), <br>
+  protocol = 4) <br>
+ 
 </code>
   </div>
 
