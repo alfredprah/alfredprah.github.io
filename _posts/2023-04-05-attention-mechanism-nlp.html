@@ -35,20 +35,22 @@ handle long-term dependencies and the ability to parallelize training across the
 <ul>
   <li>The ability to model long-term dependencies</u> in text 
     <br>
+
     In traditional NLP models, such as RNNs, the model can only access information from previous time steps in the sequence. This means that the model may 
     struggle to capture dependencies that are several steps away in the sequence. In contrast, the attention mechanism in transformers allows 
     the model to attend to any part of the input sequence, regardless of its position in the sequence. This enables the model to more effectively 
     capture long-term dependencies and produce more accurate predictions.
   </li>
   
-  <li>The ability to handle variable-length input sequences.
+  <li>The ability to handle variable-length input sequences
     <br>
+    
     Traditional NLP models, such as RNNs, require fixed-length input sequences, which can be a significant limitation when working with natural language data, where input 
     sequences can vary in length. The attention mechanism in transformers allows the model to selectively attend to different parts of the input 
     sequence, regardless of its length, making it more flexible and adaptable to different input sequences. </li>
     <br>
-     
-    <li> Improved accuracy of language translation models.
+
+    <li> Improved accuracy of language translation models
      In machine translation, the attention mechanism allows the model to selectively attend to different parts of the input sequence when generating the output sequence. 
     This enables the model to more effectively capture the meaning of the input sequence and produce more accurate translations, as seen in models 
     like Facebok's roBERTa or the more popular ChatGPT model.</li>
