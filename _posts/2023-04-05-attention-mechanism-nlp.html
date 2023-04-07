@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'The Attention mechanism in Natural Language Processing (NLP)'
-subtitle: "roBERTa? BERT? chatGPT? Think 'Attention'!"
+subtitle: "roBERTa? BERT? ChatGPT? Think 'Attention'!"
 date: 2023-04-05 00:57:00 -0500
 background: '/img/posts/neuralnetwork.jpg'
 
@@ -11,44 +11,63 @@ pagination:
 ---
 
 <h3> Introduction </h3>
-Natural Language Processing (NLP) is a field of artificial intelligence that deals with the interaction between computers and human language. 
-One of the significant challenges in NLP is the modeling of long-term dependencies in text. Recurrent Neural Networks (RNNs) have been the 
-go-to models for NLP tasks like language translation and sentiment analysis, but they have limitations in handling long-term dependencies 
-in the input sequence. This is where the attention mechanism comes in, a game-changer in NLP that enables more effective modeling of long-term 
-dependencies and improves the accuracy of NLP tasks. It has become a game-changer in NLP, enabling more effective modeling of long-term 
-dependencies and improving the accuracy of tasks such as language translation and language modeling. The development of the transformer 
-architecture, which uses the attention mechanism, has brought about significant advances in NLP and has revolutionized the field.
+Natural Language Processing (NLP) has become a crucial component of modern-day artificial intelligence, with applications ranging from 
+chatbots to language translation. However, the traditional approach of using Recurrent Neural Networks (RNNs) to model sequences of 
+inputs has limitations in handling long-term dependencies in text. The solution? Enter the attention mechanism, a revolutionary 
+technique in NLP that has enabled more accurate predictions and has brought about significant advances in the field with the 
+development of the transformer architecture.
 
 <br><br>
 
 <h3> The <b>Attention</b> mechanism </h3>
-The attention mechanism in NLP allows a model to focus on specific parts of a sentence or document when making predictions. Instead of treating all 
+The attention mechanism NLP allows an NLP model to focus on specific parts of a sentence or document when making predictions. Instead of treating all 
 parts of the input equally, the attention mechanism enables the model to selectively attend to the most important parts of the input. This approach 
 has been shown to significantly improve the accuracy of NLP tasks such as language translation, language modeling, and sentiment analysis.
 
 Transformers, a deep learning architecture introduced by Vaswani et al. in 2017, use attention to achieve state-of-the-art performance in a wide 
-range of NLP tasks. Unlike previous approaches that relied on recurrent neural networks (RNNs) to model sequences of inputs, transformers use 
-self-attention to capture the dependencies between different parts of the input sequence. This approach has several advantages over RNNs, 
-including the ability to handle long-term dependencies and the ability to parallelize training across the input sequence.
+range of NLP tasks. Unlike previous approaches that relied on RNNs to model sequences of inputs, transformers use self-attention to capture 
+the dependencies between different parts of the input sequence. This approach has several advantages over RNNs, including the ability to 
+handle long-term dependencies and the ability to parallelize training across the input sequence.
 
 <br><br>
 
 <h3> Key Differences between Attention Mechanism and RNNs </h3>
-One of the key advantages of the attention mechanism in transformers is its ability to model <u>long-term dependencies</u> in text. In traditional 
-NLP models, such as RNNs, the model can only access information from previous time steps in the sequence. This means that the model may 
-struggle to capture dependencies that are several steps away in the sequence. In contrast, the attention mechanism in transformers allows 
-the model to attend to any part of the input sequence, regardless of its position in the sequence. This enables the model to more effectively 
-capture long-term dependencies and produce more accurate predictions.
+<ul>
+  <li>The ability to model <b>long-term dependencies</u> in text
+  <br><br>
+    In traditional NLP models, such as RNNs, the model can only access information from previous time steps in the sequence. This means that the model may 
+    struggle to capture dependencies that are several steps away in the sequence. In contrast, the attention mechanism in transformers allows 
+    the model to attend to any part of the input sequence, regardless of its position in the sequence. This enables the model to more effectively 
+    capture long-term dependencies and produce more accurate predictions.
+  </li>
+  
+  <li>The ability to handle variable-length input sequences.
+    <br><br>
+    Traditional NLP models, 
+    such as RNNs, require fixed-length input sequences, which can be a significant limitation when working with natural language data, where input 
+    sequences can vary in length. The attention mechanism in transformers allows the model to selectively attend to different parts of the input 
+    sequence, regardless of its length, making it more flexible and adaptable to different input sequences. </li>
+  
+  
+  <li>Through Pickle's <b>dump</b> method, we serialized our pre-trained model, together with the stop word set from NLTK, so we don't have to install it
+    on the server. </li>
+  <li>The dump method took the object we want to pickle as its first parameter, then provided an <b>open</b> file object to specify where 
+    the Python object will be written to as a second parameter.</li>
+  <li>Through the <b> 'wb' </b> parameter inside the open() function, the .pkl file will be opened in "binary mode".</li>
+  <li>We set <b> protocol </b> = 4 to play it safe with any potential mismatch that might occur between our Python version or env. & the most 
+    efficient protocol available for Pickle files (NB: for Python 3.4, this was the latest protocol. If any errors persist, 
+    consider a lower protocol). </li>
+  
+  
+    <li> Improved accuracy of language translation models.
+      
+      <br><Br>
+     In machine translation, the 
+    attention mechanism allows the model to selectively attend to different parts of the input sequence when generating the output sequence. 
+    This enables the model to more effectively capture the meaning of the input sequence and produce more accurate translations, as seen in models 
+    like Facebok's roBERTa or the more popular ChatGPT model.</li>
+</ul>
 
-Another advantage of the attention mechanism in transformers is its ability to handle variable-length input sequences. Traditional NLP models, 
-such as RNNs, require fixed-length input sequences, which can be a significant limitation when working with natural language data, where input 
-sequences can vary in length. The attention mechanism in transformers allows the model to selectively attend to different parts of the input 
-sequence, regardless of its length, making it more flexible and adaptable to different input sequences.
-
-The attention mechanism has also been instrumental in improving the accuracy of language translation models. In machine translation, the 
-attention mechanism allows the model to selectively attend to different parts of the input sequence when generating the output sequence. 
-This enables the model to more effectively capture the meaning of the input sequence and produce more accurate translations, as seen in models 
-like Facebok's roBERTa or the more popular ChatGPT model.
 
 <br><br>
 <h3> Conclusion </h3>
