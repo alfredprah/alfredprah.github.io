@@ -27,46 +27,49 @@ one for the just-ended Super Bowl) to stay with the company long enough to turn 
 <br><br>
 
 <h3>Data Science and Machine Learning Methodology</h3>
-To reduce churn rates, EF&G can leverage Data Science and Machine Learning methodologies. The first step is to collect and analyze customer data, 
-such as the quality of service provided to a given customer (using telemetry on network strength in a geographical region for example) and data usage 
-per month (to determine if someone is potentially feeling like their getting their money's worth over time).  Then, using predictive analytics, 
+To reduce churn rates, EF&G can leverage Data Science and Machine Learning methodologies. The first step is to collect and analyze customer data. Then, using predictive analytics, 
 we can develop a churn prediction model to identify which customers are likely to churn. The model can take into account various factors, such 
-as customer demographics, usage patterns, billing history, and customer service interactions.
+as customer demographics, usage patterns, billing history, and customer service interactions. For a phone carrier specifically, other nuanced attributes
+such as the quality of service provided to a given customer (using telemetry on network strength in a geographical region for example), and segmented 
+data usage per quarter, month or week (to determine if someone is potentially feeling like their getting their money's worth over time) can be useful.  
 
-Next, we can use Machine Learning algorithms to train our churn prediction model. Several machine learning models can be used for churn prediction, 
-depending on the specific needs of the business and the available data. Here are some of the popular ones:
+Several machine learning models can be used for churn prediction, depending on the specific needs of a business and the available data. 
+Here are some good traditional options I'd personally use to generate some benchmark model performance:
 <br>
 
 <ul>
-  <li>Logistic Regression: Logistic regression is a simple yet powerful machine learning model for binary classification tasks like churn prediction. 
-It is easy to interpret and can be trained quickly on large datasets.</li>
-  <li>Decision Trees: Decision trees are another popular machine learning model for churn prediction. They are easy to interpret and can handle both 
-numerical and categorical data. However, decision trees are prone to overfitting, which can lead to poor generalization on unseen data.</li>
+  <li>Logistic Regression: This is a simple yet powerful machine learning model for binary classification tasks like churn prediction. It is easy 
+    to interpret and can be trained quickly on large datasets. It makes predictions based on a weighted  sum of input features, and its output can 
+    be passed through a sigmoid function to obtain a probability of churn.</li>
+  <li>Decision Trees: Decision trees are another popular machine learning model for churn prediction. A great value-add is its ability to 
+    recursively split the data into subsets based on the most significant feature at each step. Through this, we can infer features that are highly 
+    correlated with churn prediction or otherwise. Additionally, they are easy to interpret and can handle both numerical and categorical data. 
+    However, a downside of Decision Trees is how prone they are are to overfitting, which can lead to poor generalization on unseen data down the line. 
+</li>
   <li>Random Forest: Random forest is an ensemble learning method that combines multiple decision trees to improve the accuracy and robustness of 
-the model. It is a popular model for churn prediction because it can handle a large number of features and is less prone to overfitting than 
-decision trees. </li>
-  <li>Gradient Boosting: Gradient boosting is another ensemble learning method that combines multiple weak models to create a strong model. It is a 
-popular model for churn prediction because it can handle a large number of features and has high predictive accuracy.</li>
-  <li>Neural Networks: Neural networks are a class of deep learning models that are highly flexible and can handle both numerical and categorical data. 
-They are a popular choice for churn prediction because they can learn complex relationships between variables and can be highly accurate. </li>
-</ul>
+    the model. It is a popular model for churn prediction because it can handle a large number of features and is less prone to overfitting than 
+    decision trees. Random forest works by building multiple decision trees on random subsets of the data and then combining their predictions. 
+  </li>
+  <li>Gradient Boosting: Gradient boosting is another ensemble learning method that combines multiple weak models to create a strong model. It is 
+    a popular model for churn prediction because it can handle a large number of features and has high predictive accuracy. Gradient boosting 
+    works by iteratively adding weak models that correct the errors of the previous models. Think of it as "the model that learns from its mistakes 
+    over time".
+  </li>
 
 Ultimately, the choice of machine learning model for churn prediction depends on the specific needs of the business and the characteristics of the data.
 
 Once we've identified customers who are likely to churn, we can take proactive measures to retain them. For example, we could offer them a discount 
-or promotion, personalized recommendations based on their usage patterns, or improved customer service. By taking these proactive measures, 
-we can reduce churn rates and increase customer retention.
+or promotion, personalized recommendations based on their usage patterns, or improved customer service. 
 
 <br><br>
 
-<h3>Benefits of Data Science and Machine Learning</h3>
-Using Data Science and Machine Learning to reduce churn rates has several benefits. Firstly, it helps companies retain their customers, which is 
-crucial for their long-term success. Secondly, it helps companies save money on customer acquisition costs, as retaining existing customers is 
-generally less expensive than acquiring new ones. Thirdly, it allows companies to offer personalized recommendations and services to their 
-customers, improving the customer experience and building customer loyalty.
+<h3>Benefits of Proactively Predicting (and ultimately reducing) Churn</h3>
+  Using Data Science and Machine Learning to reduce churn rates has several benefits. First, it helps companies retain their customers, which is 
+  crucial for their long-term success (imagine squandering all the Super Bowl ad money!). Second, it helps companies save money on customer 
+  acquisition costs, as retaining existing customers is generally less expensive than acquiring new ones. Third, it allows companies to offer 
+  personalized recommendations and services to their  customers, improving the customer experience and building customer loyalty long-term.
 <br><br>
 <h3>Conclusion</h3>
-In conclusion, Data Science and Machine Learning can be used to reduce churn rates in the Telecommunications Industry. By collecting and 
-analyzing customer data and developing a churn prediction model, companies can identify which customers are likely to churn and take 
-proactive measures to retain them. This approach can help companies retain customers, save money on customer acquisition costs, and 
-improve the customer experience.
+The Telecommunication Industry was my use case for this article but Data Science and Machine Learning can be used to reduce churn rates in any other 
+  industry. By collecting and analyzing customer data to proactively develop a churn prediction model, companies can identify which customers are likely
+  to look elsewhere, and consequently take measures to retain them. 
