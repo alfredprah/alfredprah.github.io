@@ -33,8 +33,8 @@ handle long-term dependencies and the ability to parallelize training across the
 
 <h3> Key Differences between Attention Mechanism and RNNs </h3>
 <ul>
-  <li>The ability to model <b>long-term dependencies</u> in text
-  <br><br>
+  <li>The ability to model long-term dependencies</u> in text 
+    <br>
     In traditional NLP models, such as RNNs, the model can only access information from previous time steps in the sequence. This means that the model may 
     struggle to capture dependencies that are several steps away in the sequence. In contrast, the attention mechanism in transformers allows 
     the model to attend to any part of the input sequence, regardless of its position in the sequence. This enables the model to more effectively 
@@ -42,28 +42,14 @@ handle long-term dependencies and the ability to parallelize training across the
   </li>
   
   <li>The ability to handle variable-length input sequences.
-    <br><br>
-    Traditional NLP models, 
-    such as RNNs, require fixed-length input sequences, which can be a significant limitation when working with natural language data, where input 
+    <br>
+    Traditional NLP models, such as RNNs, require fixed-length input sequences, which can be a significant limitation when working with natural language data, where input 
     sequences can vary in length. The attention mechanism in transformers allows the model to selectively attend to different parts of the input 
     sequence, regardless of its length, making it more flexible and adaptable to different input sequences. </li>
-  
-  
-  <li>Through Pickle's <b>dump</b> method, we serialized our pre-trained model, together with the stop word set from NLTK, so we don't have to install it
-    on the server. </li>
-  <li>The dump method took the object we want to pickle as its first parameter, then provided an <b>open</b> file object to specify where 
-    the Python object will be written to as a second parameter.</li>
-  <li>Through the <b> 'wb' </b> parameter inside the open() function, the .pkl file will be opened in "binary mode".</li>
-  <li>We set <b> protocol </b> = 4 to play it safe with any potential mismatch that might occur between our Python version or env. & the most 
-    efficient protocol available for Pickle files (NB: for Python 3.4, this was the latest protocol. If any errors persist, 
-    consider a lower protocol). </li>
-  
-  
+    <br>
+     
     <li> Improved accuracy of language translation models.
-      
-      <br><Br>
-     In machine translation, the 
-    attention mechanism allows the model to selectively attend to different parts of the input sequence when generating the output sequence. 
+     In machine translation, the attention mechanism allows the model to selectively attend to different parts of the input sequence when generating the output sequence. 
     This enables the model to more effectively capture the meaning of the input sequence and produce more accurate translations, as seen in models 
     like Facebok's roBERTa or the more popular ChatGPT model.</li>
 </ul>
