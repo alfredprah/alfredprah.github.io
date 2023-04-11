@@ -15,6 +15,8 @@ It has numerous applications, such as sentiment analysis, chatbots, and machine 
 it means for two sets of text to be similar in natural language processing, and how this similarity can be measured using cosine 
 similarity and other methods.
 
+<br>
+
 <h3>Text Similarity</h3>
 When we talk about similarity in NLP, we refer to how closely related two pieces of text are to each other. Measuring similarity 
 between two pieces of text can be useful in various contexts, such as building a search engine, sentiment analysis, and chatbots.
@@ -29,6 +31,7 @@ the frequency of each word in the text.
 
 The bag-of-words representation of Text A might look like this:
 <br>
+<ul>
 {"Alfred": 1, "is": 1, "a": 1, "Data": 1, "Scientist": 1}
 
 <br>
@@ -50,13 +53,16 @@ And the vector representation of Text B might look like this:
 <br>
 
 [1, 1, 1, 1, 1, 1, 1, 1]
+</ul>
+
+<br>
 
 To calculate the cosine similarity between these two vectors, we use the formula: <br><br>
 
 cosine_similarity(A, B) = dot_product(A, B) / (magnitude(A) * magnitude(B)). Applying this formula to our example gives us a cosine similarity 
 of 0.89, which indicates that these two texts are fairly similar.
 
-<br>
+<br><br>
 
 <h3>Other popular methods for measuring text similarity</h3>
 There are other methods for measuring text similarity in NLP. Here are some of them:
@@ -84,6 +90,7 @@ has shown promising results in many NLP tasks, such as language translation and 
 
 <h3>Limitations of these methods</h3>
 While these methods can be useful in measuring text similarity, they have some limitations to consider. Here are some of them:
+<ul>
 <li> Bag-of-words models don't capture word order: In bag-of-words models, the order of words in a sentence is not taken into account. 
 As a result, two sentences with different word order but similar meaning may be considered dissimilar.</ul>
 
