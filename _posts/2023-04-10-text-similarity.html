@@ -34,7 +34,7 @@ the frequency of each word in the text.
 <br><br>
 Bag-of-words representations: 
 <ul>
-Text A: {"Alfred": 1, "is": 1, "a": 1, "Data": 1, "Scientist": 1}
+Text A: {"Alfred": 1, "is": 1, "a": 1, "Data": 1, "Scientist": 1} <br>
 Text B: {"Alfred": 1, "is": 1, "going": 1, "to": 1, "school": 1, "for": 1, "Data": 1, "Science": 1}
 </ul>
 <br>
@@ -45,13 +45,15 @@ We can then represent each of these bags of words as a vector:
   
 <br>
 
-<ul>Vector representation of Text B: [1, 1, 1, 1, 1, 1, 1, 1] </ul>
+Vector representation of Text B: [1, 1, 1, 1, 1, 1, 1, 1] </ul>
 
 <br>
 
 To calculate the cosine similarity between these two vectors, we use the formula: <br><br>
 
-<ul>cosine_similarity(A, B) = dot_product(A, B) / (magnitude(A) * magnitude(B)).</ul> 
+cosine_similarity(A,B) = dot_product(A, B) / (magnitude(A) * magnitude(B))
+
+<br>
 
 Applying this formula to our example gives us a cosine similarity of 0.89, which indicates that these two texts are fairly similar.
 
