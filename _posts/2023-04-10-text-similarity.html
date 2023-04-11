@@ -22,30 +22,26 @@ When we talk about similarity in NLP, we refer to how closely related two pieces
 between two pieces of text can be useful in various contexts, such as building a search engine, sentiment analysis, and chatbots.
 <br><br>
 Let's take an example to better understand text similarity. Suppose we have two pieces of text:
-
+<ul>
 Text A: Alfred is a Data Scientist <br>
 Text B: Alfred is going to school for Data Science
+ </ul>
 <br><br>
 
 To calculate the cosine similarity between these two texts, we first represent them as vectors using a bag-of-words model, which counts 
 the frequency of each word in the text. 
 
 <br><br>
-The bag-of-words representation of Text A might look like this:
-<br>
+Bag-of-words representations: 
 <ul>
-{"Alfred": 1, "is": 1, "a": 1, "Data": 1, "Scientist": 1}
-</ul>
-<br>
-And the bag-of-words representation of Text B might look like this:
-<ul>
-{"Alfred": 1, "is": 1, "going": 1, "to": 1, "school": 1, "for": 1, "Data": 1, "Science": 1}
+Text A: {"Alfred": 1, "is": 1, "a": 1, "Data": 1, "Scientist": 1}
+Text B: {"Alfred": 1, "is": 1, "going": 1, "to": 1, "school": 1, "for": 1, "Data": 1, "Science": 1}
 </ul>
 <br>
 
-We can then represent each of these bags of words as a vector. 
+We can then represent each of these bags of words as a vector:
 
-<ul>Vector representation of Text A: [1, 1, 1, 1, 1] </ul>
+<ul>Vector representation of Text A: [1, 1, 1, 1, 1] 
   
 <br>
 
@@ -88,7 +84,7 @@ has shown promising results in many NLP tasks, such as language translation and 
 While these methods can be useful in measuring text similarity, they have some limitations to consider. Here are some of them: 
 <ul>
 <li> Bag-of-words models don't capture word order: In bag-of-words models, the order of words in a sentence is not taken into account. 
-As a result, two sentences with different word order but similar meaning may be considered dissimilar.</ul>
+As a result, two sentences with different word order but similar meaning may be considered dissimilar.
 
 <li>High-dimensional space: As the number of unique words in the text increases, the dimensionality of the vector space also increases, 
 making it harder to compute similarity accurately.</li>
