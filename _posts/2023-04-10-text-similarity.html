@@ -96,12 +96,14 @@ making it harder to compute similarity accurately.</li>
 the sentences "I love ice cream" and "I hate ice cream" might be considered dissimilar, even though they have opposite meanings.</li>
 
 <li>Deep learning models may require large datasets: Deep learning models can achieve state-of-the-art performance in NLP tasks, but they 
-often require large amounts of data to train effectively. This can be a limitation in cases where the amount of available data is limited. 
+often require large amounts of data to train effectively. This can be a limitation in cases where the amount of available data is limited. <br>
+  <br>
   I've personally considered creating synthetic data to increase text corpus sizes and seen promising results but that naturally
   requires a lot of intentiionality in data training and testing to ensure you aren't testing models on synthetic data which could be less likely to
   "occur" in the real world. Deep learning models may also be computationally expensive; A work-around I've found for this is to use transfer learning
-  on the final layer of a pre-trained model with similar functiionality, to train a model on our data. However, there's the other aspect of the models 
-  themselves being impractical to use on smaller devices or in real-time applications. </li>
+  on the final layer(s) of a pre-trained model with similar predetermined functiionality, to train a model on our "smaller data" while benefiting 
+  from the learning than via much larger datasets. However, there's the other aspect of the models themselves being impractical to use on smaller 
+  devices or in real-time applications. </li>
 </ul>
 <br>
 Despite these limitations, these methods remain useful for a wide range of applications, and new techniques are being developed to address 
