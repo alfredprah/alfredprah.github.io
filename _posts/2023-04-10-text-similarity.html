@@ -10,25 +10,25 @@ pagination:
   collection: posts
 ---
 
-Natural Language Processing (NLP) is a rapidly growing field that aims to help computers understand and process human language. 
-It has numerous applications, such as sentiment analysis, chatbots, and machine translation. In this article, we will explore what 
-it means for two sets of text to be similar in natural language processing, and how this similarity can be measured using cosine 
-similarity and other methods.
+How does a computer know if 2 sets of text are similar, and how does it go about determining this? For as long as Natural Language Processing (NLP) 
+has been a field of study, the goal has been to help computers understand and process human language. In this article, we will explore what 
+it means to a computer for 2 sets of text to be similar, and how this similarity can be measured using popular methods like cosine similarity. 
+I'll also introduce other methods briefly, together with pros & cons of each one of them. 
 
 <br><br>
 
 <h3>Text Similarity</h3>
-When we talk about similarity in NLP, we refer to how closely related two pieces of text are to each other. Measuring similarity 
-between two pieces of text can be useful in various contexts, such as building a search engine, sentiment analysis, and chatbots.
+Measuring similarity between 2 pieces of text can be useful in various contexts, such as building a search engine, sentiment analysis, 
+document summarization and chatbots.
 <br><br>
-Let's take an example to better understand text similarity. Suppose we have two pieces of text:
+Let's take an example to better understand this concept via the cosine similarity approach. Suppose we have 2 pieces of text:
 <ul>
 Text A: Alfred is a Data Scientist <br>
 Text B: Alfred is going to school for Data Science
  </ul>
 <br>
 
-To calculate the cosine similarity between these two texts, we first represent them as vectors using a bag-of-words model, which counts 
+To calculate the cosine similarity between these 2 texts, we first represent them as vectors using a bag-of-words model, which counts 
 the frequency of each word in the text. 
 
 <br><br>
@@ -49,13 +49,13 @@ Text B: [1, 1, 1, 1, 1, 1, 1, 1] </ul>
 
 <br>
 
-To calculate the cosine similarity (CS) between these two vectors, we use the formula: 
+To calculate the cosine similarity (CS) between these 2 vectors, we use the formula: 
 
 <ul>CS(A,B) = dot_product(A, B) / (magnitude(A) * magnitude(B))</ul>
 
 <br>
 
-Applying this formula to our example gives us a cosine similarity of 0.89, which indicates that these two texts are fairly similar.
+Applying this formula to our example gives us a cosine similarity of 0.89, which indicates that these 2 texts are fairly similar.
 
 <br><br>
 
@@ -63,16 +63,16 @@ Applying this formula to our example gives us a cosine similarity of 0.89, which
 There are other methods for measuring text similarity in NLP. Here are some of them:
 <br>
 
-<ul><li>Jaccard similarity: This method measures similarity based on the number of common words between two sets of text. It calculates the size of
+<ul><li>Jaccard similarity: This method measures similarity based on the number of common words between 2 sets of text. It calculates the size of
 the intersection divided by the size of the union of the sets.</li>
 
-<li>Euclidean distance: This method calculates the distance between two vectors in a high-dimensional space. It measures the length of the
-shortest path between the two vectors.</li>
+<li>Euclidean distance: This method calculates the distance between 2 vectors in a high-dimensional space. It measures the length of the
+shortest path between the 2 vectors.</li>
 
-<li>Manhattan distance: This method calculates the distance between two vectors by summing the absolute differences of their components.</li>
+<li>Manhattan distance: This method calculates the distance between 2 vectors by summing the absolute differences of their components.</li>
 
-<li>Pearson correlation coefficient: This method measures the linear correlation between two sets of data. It calculates the covariance divided
-by the product of the standard deviations of the two sets.</li>
+<li>Pearson correlation coefficient: This method measures the linear correlation between 2 sets of data. It calculates the covariance divided
+by the product of the standard deviations of the 2 sets.</li>
 
 <li>Edit distance: This method measures the number of operations required to transform one set of text into another. The operations can be insertion,
 deletion, or substitution of characters.</li>
@@ -83,22 +83,24 @@ has shown promising results in many NLP tasks, such as language translation and 
 <br>
 
 <h3>Limitations of these methods</h3>
-While these methods can be useful in measuring text similarity, they have some limitations to consider. Here are some of them: 
+While these methods can be useful in measuring text similarity, they have some limitations to consider for them, across board. Here are some of them: 
 <ul>
 <li> Bag-of-words models don't capture word order: In bag-of-words models, the order of words in a sentence is not taken into account. 
-As a result, two sentences with different word order but similar meaning may be considered dissimilar.
+As a result, 2 sentences with different word order but similar meaning may be considered dissimilar.
 
 <li>High-dimensional space: As the number of unique words in the text increases, the dimensionality of the vector space also increases, 
 making it harder to compute similarity accurately.</li>
 
 <li>Meaning of words: These methods do not consider the meaning of the words used in the text, which can lead to inaccuracies. For example, 
-the sentences "I love ice cream" and "I hate ice cream" would be considered dissimilar, even though they have opposite meanings.</li>
+the sentences "I love ice cream" and "I hate ice cream" might be considered dissimilar, even though they have opposite meanings.</li>
 
 <li>Deep learning models may require large datasets: Deep learning models can achieve state-of-the-art performance in NLP tasks, but they 
-often require large amounts of data to train effectively. This can be a limitation in cases where the amount of available data is limited.</li>
-
-<li>Deep learning models may be computationally expensive: Deep learning models require significant computational resources, which can make 
-them impractical for use on smaller devices or in real-time applications.</li>
+often require large amounts of data to train effectively. This can be a limitation in cases where the amount of available data is limited. 
+  I've personally considered creating synthetic data to increase text corpus sizes and seen promising results but that naturally
+  requires a lot of intentiionality in data training and testing to ensure you aren't testing models on synthetic data which could be less likely to
+  "occur" in the real world. Deep learning models may also be computationally expensive; A work-around I've found for this is to use transfer learning
+  on the final layer of a pre-trained model with similar functiionality, to train a model on our data. However, there's the other aspect of the models 
+  themselves being impractical to use on smaller devices or in real-time applications. </li>
 </ul>
 <br>
 Despite these limitations, these methods remain useful for a wide range of applications, and new techniques are being developed to address 
