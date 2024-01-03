@@ -18,7 +18,7 @@ Here's an insight into our roadmap for latency optimization.
 
 <br><br>
 
-**The Importance of Instantaneity**
+<b>The Importance of Instantaneity</b>
 
 Users come to CarWiz seeking prompt guidance in navigating the sea of automotive options. They input their preferences and expect 
 instant Wiz-like recommendations that resonate with their needs. I am aware that the efficacy of our AI-driven advice is measured 
@@ -26,32 +26,32 @@ not only by its relevance but also by the swiftness of its delivery.
 
 <br><br>
 
-**Latency Optimization Techniques Under Consideration**
+<b>Latency Optimization Techniques Under Consideration</b>
 
-1. **Model Pruning**: Model pruning is a technique I am exploring to streamline our machine learning models on Azure ML. Approaches thus far  
+1. <b>Model Pruning</b>: Model pruning is a technique I am exploring to streamline our machine learning models on Azure ML. Approaches thus far  
 have been inspired by the paper - "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding" 
 (Han, Mao, & Dally, 2015), and it refers to the process of simplifying machine learning models by removing parts of the model that 
 contribute little to its output (such as weights close to zero in neural networks). This can result in faster model inference times 
 and reduced model sizes, which are beneficial for deployment in environments where resources are limited, like mobile devices or edge 
 computing scenarios.
 
-2. **Quantization**: Quantization involves converting a model from using floating-point numbers to using lower-precision 
+2. <b>Quantization</b>: Quantization involves converting a model from using floating-point numbers to using lower-precision 
 representations, such as integers. This can greatly reduce the computational resources required for running the model, as operations 
 on integers are faster than those on floating-point numbers. This one has also been inspired by Han, Mao & Dally, as well as the paper 
 "Compressing Deep Convolutional Networks using Vector Quantization" (Gong et. al., 2014). From prelimiary results and their analysis, I 
 expect a drop in accuracy from this strategy but don't foresee it being noticeable, given how early we are in our ML & AI journey. 
 
-3. **Data Representation**: In the technological architecture of CarWiz, we've made a strategic decision to employ Azure SQL for 
+3. <b>Data Representation</b>: In the technological architecture of CarWiz, we've made a strategic decision to employ Azure SQL for 
 structured data and tables, while utilizing Azure Blob Storage for our image data. This approach is grounded in optimizing performance,
 cost, and scalability by aligning the type of storage to the nature of the data. 
 
-4. **Caching Strategies**: Intelligent caching mechanisms, such as Azure Cache for Redis, are being designed to provide instant 
+4. <b>Caching Strategies</b>: Intelligent caching mechanisms, such as Azure Cache for Redis, are being designed to provide instant 
 responses for common queries. Caching this way could mean storing frequently accessed data in memory for quick retrieval. 
 This is particularly useful for our kind of recommendation system where many users might have similar queries, and I foresee it 
 preventing the need for the model to compute the same recommendation multiple times. However, more time is needed to 
 determine which queries are most popular among our current users. 
 
-5. **Load Balancing**: Even though we haven't experienced excessive demand on our servers yet, Load balancing is a consideration I have on 
+5. <b>Load Balancing</b>: Even though we haven't experienced excessive demand on our servers yet, Load balancing is a consideration I have on 
 my radar for the coming months. Per current subscription plans and server choices, most of our resources should scale
 as demand increases. However, depending on how costly these choices become, we might need to look into  distributing workloads across 
 multiple computing resources to ensure no single one becomes a bottleneck during a user's end-to-end experience. In the context of Azure, this could be managed automatically by services like Azure Load Balancer, which can distribute incoming traffic across multiple targets, ensuring high availability and reliability.
@@ -59,7 +59,7 @@ multiple computing resources to ensure no single one becomes a bottleneck during
 
 <br><br>
 
-**Measuring the Impact**
+<b>Measuring the Impact</b>
 
 The strategies under consideration have the potential to not only enhance the user experience but also to foster trust in our 
 platform's ability to deliver timely and relevant advice. By reducing latency, we aim to increase user engagement and ensure 
@@ -67,7 +67,7 @@ that CarWiz becomes the go-to platform for personalized car recommendations.
 
 <br><br>
 
-**Continuous Evolution**
+<b>Continuous Evolution</b>
 
 The roadmap for latency reduction at CarWiz is an evolving document, shaped by the latest in technological advancements and 
 user feedback. We remain vigilant and ready to integrate new methods that promise to bring speed gains to our platform's 
@@ -75,7 +75,7 @@ recommendations.
 
 <br><br>
 
-**Engagement with the Community**
+<b>Engagement with the Community</b>
 
 I warmly invite the data science and machine learning communities to join us in exploring the challenges and 
 solutions in latency optimization. What excites me the most about a project like CarWiz is not just the optimization 
