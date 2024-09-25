@@ -1,6 +1,7 @@
 title:              Alfred Prah
 email:              alfredprah@gmail.com
-description:        "Data Science<br><br>AI Engineering <br><br> Checkout my latest project, <a href='https://genaibro.com/' target='_blank' style='color: white;'><u>GenAIBro</u></a>"
+# description:        "Data Science<br><br>AI Engineering <br><br> Checkout my latest project, <a href='https://genaibro.com/' target='_blank' style='color: white;'><u>GenAIBro</u></a>"
+description:        "<span style='color: #FFD700;'>Data Science</span><br><br><span style='color: #FFD700;'>AI Engineering</span><br><br>Checkout my latest project, <a href='https://genaibro.com/' target='_blank' style='color: gold;'><u>GenAIBro</u></a>"
 author:             Alfred Prah
 baseurl:            ""
 url:                "https://alfredprah.github.io/"      
