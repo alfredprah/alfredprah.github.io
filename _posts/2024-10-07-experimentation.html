@@ -10,126 +10,121 @@ pagination:
   collection: posts
 ---
 
-When conducting experiments or surveys, especially in fields like marketing or social media analytics, it's crucial to:
+<p>When conducting experiments or surveys, especially in fields like marketing or social media analytics, it's crucial to:</p>
 
-- Determine the appropriate sample size to achieve desired precision and confidence.
-- Understand how to calculate p-values to assess the statistical significance of your results.
-- Know when to use different statistical tests and how to interpret them.
+<ul>
+  <li>Determine the appropriate sample size to achieve desired precision and confidence.</li>
+  <li>Understand how to calculate p-values to assess the statistical significance of your results.</li>
+  <li>Know when to use different statistical tests and how to interpret them.</li>
+</ul>
 
-This guide walks you through these concepts using practical examples, focusing on estimating click-through rates (CTR) on platforms like Meta/Facebook.
+<p>This guide walks you through these concepts using practical examples, focusing on estimating click-through rates (CTR) on platforms like Meta/Facebook.</p>
 
-<br><br>
+<br>
 
 <h3>Determining Sample Size for Estimating a Proportion</h3>
 
-<b>Step-by-Step Method</b>
+<p><strong>Step-by-Step Method</strong></p>
 
-To determine the minimum sample size (N) required to estimate a population proportion (P) within a margin of error (δ) at a specific confidence level:
+<p>To determine the minimum sample size (N) required to estimate a population proportion (P) within a margin of error (δ) at a specific confidence level:</p>
 
-1. **Choose the Confidence Level and Z-value**:  
-   Common Z-values for confidence levels are:
-   - 90%: Z ≈ 1.645
-   - 95%: Z ≈ 1.96
-   - 99%: Z ≈ 2.58
+<ol>
+  <li><strong>Choose the Confidence Level and Z-value</strong>: <br>Common Z-values for confidence levels are:</li>
+    <ul>
+      <li>90%: Z ≈ 1.645</li>
+      <li>95%: Z ≈ 1.96</li>
+      <li>99%: Z ≈ 2.58</li>
+    </ul>
+  <li><strong>Decide on the Margin of Error (δ)</strong>:<br>This represents the maximum acceptable difference between your sample estimate and the true population proportion.</li>
+  <li><strong>Estimate the Population Proportion (P)</strong>:<br>Use prior data or P = 0.5 if unknown for a conservative estimate.</li>
+  <li><strong>Apply the Sample Size Formula</strong>:<br>
+    <pre><code>N = (Z * √(P(1-P)) / δ)^2</code></pre>
+  </li>
+</ol>
 
-2. **Decide on the Margin of Error (δ)**:  
-   This represents the maximum acceptable difference between your sample estimate and the true population proportion.
-
-3. **Estimate the Population Proportion (P)**:  
-   Use prior data or P = 0.5 if unknown for a conservative estimate.
-
-4. **Apply the Sample Size Formula**:  
-\[
-N = \left( \frac{Z \cdot \sqrt{P(1-P)}}{\delta} \right)^2
-\]
-
-<br><br>
+<br>
 
 <h3>Examples</h3>
 
-<b>Example 1: Estimated Proportion Known</b>
+<p><strong>Example 1: Estimated Proportion Known</strong></p>
 
-- Estimated CTR (P): 10%
-- Margin of Error (δ): 2%
-- Confidence Level: 95% (Z = 2)
+<ul>
+  <li>Estimated CTR (P): 10%</li>
+  <li>Margin of Error (δ): 2%</li>
+  <li>Confidence Level: 95% (Z = 2)</li>
+</ul>
 
-Calculations yield a minimum sample size of 900.
+<p>Calculations yield a minimum sample size of 900.</p>
 
-<b>Example 2: Estimated Proportion Unknown</b>
+<p><strong>Example 2: Estimated Proportion Unknown</strong></p>
 
-- P = 0.5
-- δ = 2%
-- Confidence Level: 95% (Z = 2)
+<ul>
+  <li>P = 0.5</li>
+  <li>δ = 2%</li>
+  <li>Confidence Level: 95% (Z = 2)</li>
+</ul>
 
-Calculations yield a sample size of 2,500.
+<p>Calculations yield a sample size of 2,500.</p>
 
-<br><br>
+<br>
 
 <h3>Calculating P-Values and Hypothesis Testing</h3>
 
-The framework for hypothesis testing includes:
+<p>The framework for hypothesis testing includes:</p>
 
-1. **Formulate Hypotheses**:  
-   Null Hypothesis (H₀) assumes no effect, while the Alternative Hypothesis (H₁) tests for an effect or difference.
+<ol>
+  <li><strong>Formulate Hypotheses</strong>:<br>Null Hypothesis (H₀) assumes no effect, while the Alternative Hypothesis (H₁) tests for an effect or difference.</li>
+  <li><strong>Choose Significance Level (α)</strong>:<br>Common choices are 0.05, 0.01, or 0.10.</li>
+  <li><strong>Calculate Test Statistics</strong>:<br>For large sample sizes, use the z-statistic:
+    <pre><code>Z = (P̂ - P₀) / √(P₀(1-P₀) / N)</code></pre>
+  </li>
+</ol>
 
-2. **Choose Significance Level (α)**:  
-   Common choices are 0.05, 0.01, or 0.10.
-
-3. **Calculate Test Statistics**:  
-   For large sample sizes, use the z-statistic:
-\[
-Z = \frac{\hat{P} - P₀}{\sqrt{\frac{P₀(1-P₀)}{N}}}
-\]
-
-<br><br>
+<br>
 
 <h3>When to Use t-Statistic vs. z-Statistic</h3>
 
-- **Z-Statistic**: Used when population standard deviation is known and sample size is large (N ≥ 30).
-- **T-Statistic**: Used when population standard deviation is unknown, especially with small samples (N < 30).
+<ul>
+  <li><strong>Z-Statistic</strong>: Used when population standard deviation is known and sample size is large (N ≥ 30).</li>
+  <li><strong>T-Statistic</strong>: Used when population standard deviation is unknown, especially with small samples (N &lt; 30).</li>
+</ul>
 
-<br><br>
+<br>
 
 <h3>One-Tailed vs. Two-Tailed Tests</h3>
 
-- **One-Tailed Test**: Tests for an effect in one direction.
-- **Two-Tailed Test**: Tests for any significant difference, regardless of direction.
+<ul>
+  <li><strong>One-Tailed Test</strong>: Tests for an effect in one direction.</li>
+  <li><strong>Two-Tailed Test</strong>: Tests for any significant difference, regardless of direction.</li>
+</ul>
 
-Choosing between these depends on whether you are testing for a specific direction or any deviation.
+<p>Choosing between these depends on whether you are testing for a specific direction or any deviation.</p>
 
-<br><br>
+<br>
 
 <h3>Comprehensive Example</h3>
 
-<b>Scenario:</b> Testing if a new ad design increases CTR from 5%.
+<p><strong>Scenario:</strong> Testing if a new ad design increases CTR from 5%.</p>
 
-1. **Determine Sample Size**:  
-   With a desired margin of error of ±2%, a confidence level of 95%, and an estimated CTR of 5%, you calculate a sample size of approximately 475.
+<ol>
+  <li><strong>Determine Sample Size</strong>:<br>With a desired margin of error of ±2%, a confidence level of 95%, and an estimated CTR of 5%, you calculate a sample size of approximately 475.</li>
+  <li><strong>Collect Data</strong>:<br>Sample size: 500<br>Observed clicks: 35<br>Observed CTR: 7%</li>
+  <li><strong>Conduct Hypothesis Test</strong>:<br>Null Hypothesis (H₀): P = 0.05<br>Alternative Hypothesis (H₁): P &gt; 0.05</li>
+  <li><strong>Calculate Test Statistic</strong>:<br>Using the observed data, calculate Z ≈ 2.051.</li>
+  <li><strong>Calculate P-Value</strong>:<br>One-tailed p-value ≈ 0.0202, which is less than α = 0.05, leading to the rejection of the null hypothesis.</li>
+</ol>
 
-2. **Collect Data**:  
-   Sample size: 500  
-   Observed clicks: 35  
-   Observed CTR: 7%
-
-3. **Conduct Hypothesis Test**:  
-   Null Hypothesis (H₀): P = 0.05  
-   Alternative Hypothesis (H₁): P > 0.05
-
-4. **Calculate Test Statistic**:  
-   Using the observed data, calculate Z ≈ 2.051.
-
-5. **Calculate P-Value**:  
-   One-tailed p-value ≈ 0.0202, which is less than α = 0.05, leading to the rejection of the null hypothesis.
-
-<br><br>
+<br>
 
 <h3>Conclusion</h3>
 
-By following this guide, you can:
+<p>By following this guide, you can:</p>
 
-- Determine sample sizes for statistical studies.
-- Calculate p-values for statistical significance.
-- Decide between t-statistics and z-statistics.
-- Choose the appropriate hypothesis testing method for your analysis.
+<ul>
+  <li>Determine sample sizes for statistical studies.</li>
+  <li>Calculate p-values for statistical significance.</li>
+  <li>Decide between t-statistics and z-statistics.</li>
+  <li>Choose the appropriate hypothesis testing method for your analysis.</li>
+</ul>
 
-In summary, these statistical principles ensure the reliability of your experimental findings and help make informed, data-driven decisions.
+<p>In summary, these statistical principles ensure the reliability of your experimental findings and help make informed, data-driven decisions.</p>
