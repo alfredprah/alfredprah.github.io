@@ -1,0 +1,155 @@
+---
+layout: default
+---
+
+<!-- Hero Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{ site.title }}</h1>
+            {% if site.description %}
+            <span class="subheading">{{ site.description }}</span>
+            {% endif %}
+            <div style="margin-top: 24px;">
+              <a href="https://www.linkedin.com/in/alfredprah" target="_blank" style="color: white; margin-right: 18px; font-size: 1.4rem;"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/alfredprah" target="_blank" style="color: white; margin-right: 18px; font-size: 1.4rem;"><i class="fab fa-github"></i></a>
+              <a href="mailto:alfredprah@gmail.com" style="color: white; font-size: 1.4rem;"><i class="far fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 mx-auto">
+
+        <h2 class="section-heading" style="margin-top: 40px; margin-bottom: 8px;">What I've Built</h2>
+        <p style="color: #868e96; margin-bottom: 30px;">Shipped products and independent AI projects — all built solo, end to end.</p>
+
+        <div class="row">
+
+          <!-- Momenta -->
+          <div class="col-md-6" style="margin-bottom: 28px;">
+            <div style="border: 1px solid #e9ecef; border-radius: 8px; padding: 24px; height: 100%; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.25rem;">Momenta</h3>
+                <span style="margin-left: 10px; background: #28a745; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 600;">LIVE ON APP STORE</span>
+              </div>
+              <p style="color: #868e96; font-size: 0.92rem; margin-bottom: 12px;">Daily wellness app for mothers — mood tracking, guided breathing with haptic feedback, voice journaling, and 240+ mood-matched quotes. Subscription billing, fully on-device privacy architecture.</p>
+              <div style="margin-bottom: 12px;">
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">React Native</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">App Store</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">RevenueCat</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem;">Haptics</span>
+              </div>
+              <a href="https://hellomomenta.com" target="_blank" style="font-size: 0.9rem;">hellomomenta.com &rarr;</a>
+            </div>
+          </div>
+
+          <!-- FutureForm -->
+          <div class="col-md-6" style="margin-bottom: 28px;">
+            <div style="border: 1px solid #e9ecef; border-radius: 8px; padding: 24px; height: 100%; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.25rem;">FutureForm</h3>
+                <span style="margin-left: 10px; background: #0d6efd; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 600;">IN DEVELOPMENT</span>
+              </div>
+              <p style="color: #868e96; font-size: 0.92rem; margin-bottom: 12px;">AI-powered fitness transformation visualizer. Upload a photo, select a goal, get a realistic AI-generated preview of your future physique. Custom generative pipeline: ControlNet, IP-Adapter, body segmentation.</p>
+              <div style="margin-bottom: 12px;">
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">React Native</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">FastAPI</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">Stable Diffusion</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">ControlNet</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem;">RunPod</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Persona Pipeline -->
+          <div class="col-md-6" style="margin-bottom: 28px;">
+            <div style="border: 1px solid #e9ecef; border-radius: 8px; padding: 24px; height: 100%; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.25rem;">AI Persona Pipeline</h3>
+                <span style="margin-left: 10px; background: #0d6efd; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 600;">IN DEVELOPMENT</span>
+              </div>
+              <p style="color: #868e96; font-size: 0.92rem; margin-bottom: 12px;">End-to-end pipeline for generating consistent AI character content — image generation with FLUX/LoRA, voice cloning with Chatterbox, talking-head video via LivePortrait/MuseTalk, and full video with Wan 2.2. Built a character bible and content workflow for a fitness influencer persona.</p>
+              <div style="margin-bottom: 12px;">
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">FLUX.1 Kontext</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">LoRA</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">Chatterbox TTS</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">LivePortrait</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem;">ComfyUI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- GenAIBro -->
+          <div class="col-md-6" style="margin-bottom: 28px;">
+            <div style="border: 1px solid #e9ecef; border-radius: 8px; padding: 24px; height: 100%; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.25rem;">GenAIBro</h3>
+              </div>
+              <p style="color: #868e96; font-size: 0.92rem; margin-bottom: 12px;">Generative AI application leveraging LLMs for personalized content generation. Full-stack product built and deployed as a solo developer.</p>
+              <div style="margin-bottom: 12px;">
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">React</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">LLMs</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem;">Full Stack</span>
+              </div>
+              <a href="https://genaibro.com" target="_blank" style="font-size: 0.9rem;">genaibro.com &rarr;</a>
+            </div>
+          </div>
+
+          <!-- CarWiz -->
+          <div class="col-md-6" style="margin-bottom: 28px;">
+            <div style="border: 1px solid #e9ecef; border-radius: 8px; padding: 24px; height: 100%; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.25rem;">CarWiz</h3>
+              </div>
+              <p style="color: #868e96; font-size: 0.92rem; margin-bottom: 12px;">Real-time AI car recommendation platform hosted on Azure. Engineered latency optimization via model pruning, quantization, Redis caching, and load balancing for sub-second inference.</p>
+              <div style="margin-bottom: 12px;">
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">Azure ML</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">Redis</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem; margin-right: 4px;">Model Optimization</span>
+                <span class="badge badge-secondary" style="font-size: 0.75rem;">Python</span>
+              </div>
+              <a href="/2024/01/02/zero-latency-AI.html" style="font-size: 0.9rem;">Read the technical write-up &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Recent Writing Section -->
+        <h2 class="section-heading" style="margin-top: 30px; margin-bottom: 8px;">Recent Writing</h2>
+        <p style="color: #868e96; margin-bottom: 24px;">Technical deep-dives on AI, ML, and data science.</p>
+
+        {% for post in site.posts limit : 4 %}
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h2 class="post-title" style="font-size: 1.2rem;">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle" style="font-size: 0.95rem;">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle" style="font-size: 0.95rem;">{{ post.excerpt | strip_html | truncatewords: 20 }}</h3>
+            {% endif %}
+          </a>
+          <p class="post-meta">{{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}</p>
+        </article>
+        <hr>
+        {% endfor %}
+
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">All Writing &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </div>

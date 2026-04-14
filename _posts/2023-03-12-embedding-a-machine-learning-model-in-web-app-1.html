@@ -1,0 +1,78 @@
+---
+layout: post
+title: "Part 1: Creating a model that persists through Python's Pickle module"
+subtitle: 'Embedding a Machine Learning Model in a Web Application'
+date: 2023-03-16 17:57:00 -0500
+background: '/img/posts/brain-ml.jpg'
+
+pagination:
+  enabled: false
+  collection: posts
+---
+
+<h3> Introduction </h3>
+Congrats! You successfully built a Machine Learning model locally. Big first step! After evaluating your model's performance & being "satisfied" 
+(read: content) with the results, how can you go about packaging all of this goodness to share with the world? How can we embed a machine learning model into a web application
+that can not only classify or infer but also learn from data in real-time? It starts with creating a model that <b>persists</b> (the literal 
+definition of the word works just fine here 🙂)
+
+
+<br><br>
+
+<h3> Saving the current state of a trained machine learning model </h3>
+There are a number of options available. However, given how widely Python is considered the go-to language for Machine Learning, I recommend its built-in
+pickle module - a module that allows a trained model to persist on a hosted, client-facing platform by allowing us to serialize and de-serialize its
+structures to compact byte code. This way, we're able to save the model in its current state & reload whenever we're looking to make a prediction 
+or inference on new samples, without needing to retrain it from scratch each time. As you'd imagine, there are many benefits to this - time, performance,
+etc. 
+
+
+<br><br>
+
+<h3> Creating a Pickle file </h3>
+So we trained our model successfully, and are delighted with its performance on previously-unseen data.. what comes next? For the purposes of this 
+article, let's assume we own a toothbrush company, and we trained a model to infer user sentiment on how a newly launched brush - a brush 
+that was marketed to massage gums like never experienced before, was received by some of our loyal customers. Let's also assume we trained a logistic
+regression model to determine whether a sentiment (expressed in the form of a toothbrush review) is good (positive) or bad (negative). Consequently, 
+we'd have a web app that allows a user to type in their review, and the goal would be to use our model which persists on the web app to reply to the
+input in real-time: "positive" or "negative"
+
+ <br><br>
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">view code</button>
+  <div id = "demo" class="collapse">
+<code> <br>
+import pickle <br>
+import os <br>
+dest = os.path.join('sentimentfolder', 'pkl_objects') <br>
+if not os.path.exisits(dest): <br>
+&emsp; os.makedirs(dest) <br>
+pickle.dump(stop, <br>
+  &emsp; open (os.path.join(dest, 'stopwords.pkl'), 'wb'), <br>
+  &emsp; protocol=4) <br>
+pickle.dump(clf, <br>
+  &emsp; open(os.path.join(dest, 'classifier.pkl'), 'wb'), <br>
+  &emsp; protocol = 4) <br>
+ 
+</code>
+  </div>
+
+<br><br>
+
+<h3> Key takeaways from code above: </h3>
+
+<ul>
+  <li>The <b> sentimentfolder </b> directory is where we'll later store the files and data for our web app.</li>
+  <li>Within the sentimentfolder directory, we created a <b> pkl_objects</b> subdirectory to save the serialized Python objects to our local drive.</li>
+  <li>Through Pickle's <b>dump</b> method, we serialized our pre-trained model, together with the stop word set from NLTK, so we don't have to install it
+    on the server. </li>
+  <li>The dump method took the object we want to pickle as its first parameter, then provided an <b>open</b> file object to specify where 
+    the Python object will be written to as a second parameter.</li>
+  <li>Through the <b> 'wb' </b> parameter inside the open() function, the .pkl file will be opened in "binary mode".</li>
+  <li>We set <b> protocol </b> = 4 to play it safe with any potential mismatch that might occur between our Python version or env. & the most 
+    efficient protocol available for Pickle files (NB: for Python 3.4, this was the latest protocol. If any errors persist, 
+    consider a lower protocol). </li>
+</ul>
+
+
+<p> What comes next? Watch out for Part 2: <b>unpickling the serialized model for future inputs...</b> </p>

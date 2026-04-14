@@ -1,0 +1,132 @@
+---
+layout: post
+title: 'Sample Size Determination, P-Value Calculation & Hypothesis Testing'
+subtitle: "A detailed step-by-step approach to calculating minimum sample size, p-values, and conducting hypothesis tests in statistical studies."
+date: 2024-10-06 10:00:00 -0500
+background: '/img/posts/genaibro.jpg'
+
+pagination:
+  enabled: false
+  collection: posts
+---
+
+<p>I've been tinkering with what it would take to accelerate GenAIBro's growth, and have been reflecting quite a bit on experimentation. 
+  Granted, GenAIBro is still in its infancy, but with the trajectory it's on, I'd be remiss if I werent planning next steps already. 
+  Now, to the Article! When conducting Experiments, especially in Marketing, it's crucial to:</p>
+
+<ul>
+  <li>Determine the appropriate sample size to achieve desired precision and confidence.</li>
+  <li>Understand how to calculate p-values to assess the statistical significance of your results.</li>
+  <li>Know when to use different statistical tests and how to interpret them.</li>
+</ul>
+
+<p>I created this guide as a refresher, and it should walk you (read: us) through these concepts using practical examples, focusing on the use case of estimating click-through rates (CTR) on platforms.</p>
+
+<br>
+
+<h3>Determining Sample Size for Estimating a Proportion</h3>
+
+<p><strong>Step-by-Step Method</strong></p>
+
+<p>To determine the minimum sample size (N) required to estimate a population proportion (P) within a margin of error (δ) at a specific confidence level:</p>
+
+<ol>
+  <li><strong>Choose the Confidence Level and Z-value</strong>: <br>Common Z-values for confidence levels are:</li>
+    <ul>
+      <li>90%: Z ≈ 1.645</li>
+      <li>95%: Z ≈ 1.96</li>
+      <li>99%: Z ≈ 2.58</li>
+    </ul>
+  <li><strong>Decide on the Margin of Error (δ)</strong>:<br>This represents the maximum acceptable difference between your sample estimate and the true population proportion.</li>
+  <li><strong>Estimate the Population Proportion (P)</strong>:<br>Use prior data or P = 0.5 if unknown for a conservative estimate.</li>
+  <li><strong>Apply the Sample Size Formula</strong>:<br>
+    <pre><code>N = (Z * √(P(1-P)) / δ)^2</code></pre>
+  </li>
+</ol>
+
+<br>
+
+<h3>Examples</h3>
+
+<p><strong>Example 1: Estimated Proportion Known</strong></p>
+
+<ul>
+  <li>Estimated CTR (P): 10%</li>
+  <li>Margin of Error (δ): 2%</li>
+  <li>Confidence Level: 95% (Z = 2)</li>
+</ul>
+
+<p>Calculations yield a minimum sample size of 900.</p>
+
+<p><strong>Example 2: Estimated Proportion Unknown</strong></p>
+
+<ul>
+  <li>P = 0.5</li>
+  <li>δ = 2%</li>
+  <li>Confidence Level: 95% (Z = 2)</li>
+</ul>
+
+<p>Calculations yield a sample size of 2,500.</p>
+
+<br>
+
+<h3>Calculating P-Values and Hypothesis Testing</h3>
+
+<p>The framework for hypothesis testing includes:</p>
+
+<ol>
+  <li><strong>Formulate Hypotheses</strong>:<br>Null Hypothesis (H₀) assumes no effect, while the Alternative Hypothesis (H₁) tests for an effect or difference.</li>
+  <li><strong>Choose Significance Level (α)</strong>:<br>Common choices are 0.05, 0.01, or 0.10.</li>
+  <li><strong>Calculate Test Statistics</strong>:<br>For large sample sizes, use the z-statistic:
+    <pre><code>Z = (P̂ - P₀) / √(P₀(1-P₀) / N)</code></pre>
+  </li>
+</ol>
+
+<br>
+
+<h3>When to Use t-Statistic vs. z-Statistic</h3>
+
+<ul>
+  <li><strong>Z-Statistic</strong>: Used when population standard deviation is known and sample size is large (N ≥ 30).</li>
+  <li><strong>T-Statistic</strong>: Used when population standard deviation is unknown, especially with small samples (N &lt; 30).</li>
+</ul>
+
+<br>
+
+<h3>One-Tailed vs. Two-Tailed Tests</h3>
+
+<ul>
+  <li><strong>One-Tailed Test</strong>: Tests for an effect in one direction.</li>
+  <li><strong>Two-Tailed Test</strong>: Tests for any significant difference, regardless of direction.</li>
+</ul>
+
+<p>Choosing between these depends on whether you are testing for a specific direction or any deviation.</p>
+
+<br>
+
+<h3>Comprehensive Example</h3>
+
+<p><strong>Scenario:</strong> Testing if a new ad design increases CTR from 5%.</p>
+
+<ol>
+  <li><strong>Determine Sample Size</strong>:<br>With a desired margin of error of ±2%, a confidence level of 95%, and an estimated CTR of 5%, you calculate a sample size of approximately 475.</li>
+  <li><strong>Collect Data</strong>:<br>Sample size: 500<br>Observed clicks: 35<br>Observed CTR: 7%</li>
+  <li><strong>Conduct Hypothesis Test</strong>:<br>Null Hypothesis (H₀): P = 0.05<br>Alternative Hypothesis (H₁): P &gt; 0.05</li>
+  <li><strong>Calculate Test Statistic</strong>:<br>Using the observed data, calculate Z ≈ 2.051.</li>
+  <li><strong>Calculate P-Value</strong>:<br>One-tailed p-value ≈ 0.0202, which is less than α = 0.05, leading to the rejection of the null hypothesis.</li>
+</ol>
+
+<br>
+
+<h3>Conclusion</h3>
+
+<p>By following this guide, you can:</p>
+
+<ul>
+  <li>Determine sample sizes for statistical studies.</li>
+  <li>Calculate p-values for statistical significance.</li>
+  <li>Decide between t-statistics and z-statistics.</li>
+  <li>Choose the appropriate hypothesis testing method for your analysis.</li>
+</ul>
+
+<p>In summary, these statistical principles ensure the reliability of experimental findings and help make informed, data-driven decisions.</p>

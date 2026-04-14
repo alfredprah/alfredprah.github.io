@@ -1,0 +1,29 @@
+// Import Core Clean Blog SCSS
+@import "../assets/vendor/startbootstrap-clean-blog/scss/styles.scss";
+
+// Custom overrides
+
+// Dark gradient hero when no background image is set
+header.masthead {
+  background: linear-gradient(135deg, #0f1724 0%, #1a2a3a 40%, #2d3748 100%) !important;
+  min-height: auto !important;
+  padding-top: 120px !important;
+  padding-bottom: 80px !important;
+}
+
+// Tighten the page heading spacing
+.page-heading h1 {
+  font-size: 3.2rem;
+}
+
+.page-heading .subheading {
+  font-size: 1.15rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+// Section headings on homepage
+.section-heading {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}

@@ -1,0 +1,9 @@
+# Going from academia to the real world.. 
+
+Academia: focus on model performance (accuracy of predictions). real-world: latency, explainability, maintenance. 
+model- development: focus in academia. especially the model training process where the hold out set is usually so small.. 
+in the real-world, we care about the model's ability to generalize & make proper inferences. 
+"academia prioritizes fast training, whereas production usually prioritizes fast inference". key word in there is "fast". I don't want to go on my 
+favorite food app on any given day & wait 10 secs. to see a "for you" listing. 
+
+as a consequence, research prioritizes high throughput while prod. prioritizes low latency. latency & throughput have an inverse relationship. 
