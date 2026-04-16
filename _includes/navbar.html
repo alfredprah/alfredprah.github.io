@@ -8,17 +8,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
+        <li class="nav-item{% if page.url == '/' %} active{% endif %}">
+          <a class="nav-link" href="{{"/" | relative_url }}" style="{% if page.url == '/' %}font-weight: 600; color: #212529;{% endif %}">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/projects" | relative_url }}">Projects</a>
+        <li class="nav-item{% if page.url contains '/projects' %} active{% endif %}">
+          <a class="nav-link" href="{{"/projects" | relative_url }}" style="{% if page.url contains '/projects' %}font-weight: 600; color: #212529;{% endif %}">Projects</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ "/posts" | relative_url }}">Writing</a>
+        <li class="nav-item{% if page.url contains '/posts' %} active{% endif %}">
+          <a class="nav-link" href="{{ "/posts" | relative_url }}" style="{% if page.url contains '/posts' %}font-weight: 600; color: #212529;{% endif %}">Writing</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
+        <li class="nav-item{% if page.url contains '/about' %} active{% endif %}">
+          <a class="nav-link" href="{{"/about" | relative_url }}" style="{% if page.url contains '/about' %}font-weight: 600; color: #212529;{% endif %}">About</a>
         </li>
       </ul>
     </div>
