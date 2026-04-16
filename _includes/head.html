@@ -17,7 +17,15 @@
 
   <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
   <style>
-    p a, li a, em a, td a, strong a { color: #0d6efd !important; text-decoration: underline !important; }
+    /* Blue underlined links in article/page body content only */
+    .col-lg-8 > p a,
+    .col-lg-8 > em a,
+    .col-lg-8 > ul a,
+    .col-lg-8 > ol a,
+    .col-lg-10 > p a {
+      color: #0d6efd !important;
+      text-decoration: underline !important;
+    }
   </style>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="shortcut icon" type="image/jpg" href="/img/IMG_1074.jpg">
