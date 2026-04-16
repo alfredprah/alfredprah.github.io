@@ -8,16 +8,81 @@ layout: default
       <div class="col-lg-10 col-md-10 mx-auto">
 
         <div style="margin-top: 40px; margin-bottom: 32px;">
-          <h1 style="margin: 0 0 6px; font-size: 2rem;">{{ site.title }}</h1>
-          {% if site.description %}
-          <p style="color: #868e96; margin: 0 0 12px;">{{ site.description }}</p>
-          {% endif %}
+          <h1 id="typed-name" style="margin: 0 0 6px; font-size: 2rem; min-height: 2.4rem;"></h1>
+          <p style="color: #868e96; margin: 0 0 12px; min-height: 1.5rem;">
+            <span id="typed-descriptor"></span><span id="cursor" style="display: inline-block; width: 2px; height: 1em; background: #868e96; margin-left: 2px; vertical-align: text-bottom; animation: blink 0.7s step-end infinite;"></span>
+          </p>
           <div>
             <a href="https://www.linkedin.com/in/alfredprah" target="_blank" style="color: #495057; margin-right: 14px; font-size: 1.1rem;"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/alfredprah" target="_blank" style="color: #495057; margin-right: 14px; font-size: 1.1rem;"><i class="fab fa-github"></i></a>
             <a href="mailto:alfredprah@gmail.com" style="color: #495057; font-size: 1.1rem;"><i class="far fa-envelope"></i></a>
           </div>
         </div>
+
+        <style>
+          @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        </style>
+
+        <script>
+        (function() {
+          var name = "Alfred Prah";
+          var descriptors = [
+            "I build and ship AI products.",
+            "product engineer.",
+            "data scientist.",
+            "mobile developer.",
+            "builder."
+          ];
+          var nameEl = document.getElementById("typed-name");
+          var descEl = document.getElementById("typed-descriptor");
+          var typeSpeed = 70;
+          var eraseSpeed = 40;
+          var pauseAfterType = 2000;
+          var pauseAfterErase = 400;
+
+          function typeText(el, text, cb) {
+            var i = 0;
+            (function next() {
+              if (i <= text.length) {
+                el.textContent = text.slice(0, i);
+                i++;
+                setTimeout(next, typeSpeed);
+              } else if (cb) cb();
+            })();
+          }
+
+          function eraseText(el, cb) {
+            var text = el.textContent;
+            var i = text.length;
+            (function next() {
+              if (i >= 0) {
+                el.textContent = text.slice(0, i);
+                i--;
+                setTimeout(next, eraseSpeed);
+              } else if (cb) cb();
+            })();
+          }
+
+          function cycleDescriptors(idx) {
+            typeText(descEl, descriptors[idx], function() {
+              setTimeout(function() {
+                eraseText(descEl, function() {
+                  setTimeout(function() {
+                    cycleDescriptors((idx + 1) % descriptors.length);
+                  }, pauseAfterErase);
+                });
+              }, pauseAfterType);
+            });
+          }
+
+          // Type name first, then start cycling descriptors
+          typeText(nameEl, name, function() {
+            setTimeout(function() {
+              cycleDescriptors(0);
+            }, 500);
+          });
+        })();
+        </script>
 
         <h2 class="section-heading" style="margin-top: 0; margin-bottom: 8px;">What I've Built</h2>
         <p style="color: #868e96; margin-bottom: 30px;">Shipped products and independent AI projects — all built solo, end to end.</p>
