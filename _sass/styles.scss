@@ -28,11 +28,6 @@ header.masthead {
   font-weight: 700;
 }
 
-// Make links visibly blue and underlined (not hidden as dark text)
-p a, li a, em a, td a {
-  color: #0d6efd !important;
-  text-decoration: underline !important;
-}
 
 // Make navbar visible on light pages (no hero masthead).
 // The clean-blog theme styled it as transparent w/ white text to overlay a hero.
